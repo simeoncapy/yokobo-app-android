@@ -1,0 +1,38 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <string-array name="language">
+        <item>English</item>
+        <item>Français</item>
+        <item>日本語</item>
+        <item>Español</item>
+    </string-array>
+
+    <string-array name="language_code">
+        <item>en</item>
+        <item>fr</item>
+        <item>ja</item>
+        <item>es</item>
+    </string-array>
+
+    <string-array name="theme">
+        <item>@string/setting_phone_theme</item>
+        <item>@string/setting_light_theme</item>
+        <item>@string/setting_dark_theme</item>
+    </string-array>
+
+    <string-array name="theme_code">
+        <item>phone</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.gvlab.yokobo.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_shop"
+        android:name="com.gvlab.yokobo.ui.shop.ShopFragment"
+        android:label="@string/title_shop"
+        tools:layout="@layout/fragment_shop" />
+
+    <fragment
+        android:id="@+id/navigation_help"
+        android:name="com.gvlab.yokobo.ui.help.HelpFragment"
+        android:label="@string/title_help"
+        tools:layout="@layout/fragment_help" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.gvlab.yokobo.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/navigation_config"
+        android:name="com.gvlab.yokobo.ui.config.ConfigFragment"
+        android:label="@string/title_config"
+        tools:layout="@layout/fragment_config" />
+
+    <fragment
+        android:id="@+id/navigation_config_wifi"
+        android:name="com.gvlab.yokobo.ui.config.ConfigWifiFragment"
+        android:label="@string/title_config_wifi"
+        tools:layout="@layout/fragment_config_wifi" />
+
+    <fragment
+        android:id="@+id/navigation_config_ws"
+        android:name="com.gvlab.yokobo.ui.config.ConfigWeatherStationFragment"
+        android:label="@string/title_config_ws"
+        tools:layout="@layout/fragment_config_weather_station" />
+
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="com.gvlab.yokobo.ui.settings.AboutFragment"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/navigation_info"
+        android:name="com.gvlab.yokobo.ui.info.YokoboInfoFragment"
+        android:label="@string/title_info"
+        tools:layout="@layout/fragment_yokobo_info" />
+</navigation>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.info.YokoboInfoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.info.YokoboInfoFragment">
+
+        <TextView
+            android:id="@+id/text_info_ip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="24sp"
+            android:text="0.0.0.0"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_baseline_circle_24"
+            android:drawableTint="@color/y_green"
+            android:backgroundTint="@color/design_default_color_secondary"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_refresh_ip"
+            />
+
+        <ImageButton
+            android:id="@+id/button_refresh_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_baseline_refresh_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/text_info_info"
+            app:layout_constraintLeft_toRightOf="@+id/text_info_ip"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/text_info_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:text="@string/info_description"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_info_ip" />
+
+        <TextView
+            android:id="@+id/text_info_temperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="18sp"
+            android:text="@string/info_temperature"
+            android:gravity="right"
+            android:drawableLeft="@drawable/ic_baseline_thermometer"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_info_info"
+            app:layout_constraintRight_toLeftOf="@+id/text_info_humidity"
+            />
+
+        <TextView
+            android:id="@+id/text_info_humidity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="18sp"
+            android:text="@string/info_humidity"
+            android:gravity="right"
+            android:drawableLeft="@drawable/ic_baseline_water_drop"
+            app:layout_constraintLeft_toRightOf="@+id/text_info_temperature"
+            app:layout_constraintTop_toBottomOf="@+id/text_info_info"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/text_info_atm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="18sp"
+            android:text="1006.6 hPa"
+            android:gravity="right"
+            android:drawableLeft="@drawable/ic_baseline_atm_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_info_temperature"
+            app:layout_constraintRight_toLeftOf="@+id/text_info_co2"
+            />
+
+        <TextView
+            android:id="@+id/text_info_co2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="18sp"
+            android:text="586 ppm"
+            android:gravity="right"
+            android:drawableLeft="@drawable/ic_baseline_co2_24"
+            app:layout_constraintLeft_toRightOf="@+id/text_info_atm"
+            app:layout_constraintTop_toBottomOf="@+id/text_info_humidity"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/text_info_key"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="18sp"
+            android:text="no"
+            android:gravity="right"
+            android:drawableLeft="@drawable/ic_baseline_key_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_info_atm"
+            app:layout_constraintRight_toLeftOf="@+id/text_info_presence"
+            />
+
+        <TextView
+            android:id="@+id/text_info_presence"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="18sp"
+            android:text="no"
+            android:gravity="right"
+            android:drawableLeft="@drawable/ic_baseline_emoji_people_24"
+            app:layout_constraintLeft_toRightOf="@+id/text_info_key"
+            app:layout_constraintTop_toBottomOf="@+id/text_info_co2"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/text_info_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:drawableLeft="@drawable/ic_baseline_format_list_numbered_24"
+            android:text=""
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_info_presence" />
+
+                <Space
+            android:id="@+id/info_spacer"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

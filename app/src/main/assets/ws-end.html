@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="robots" content="noindex">
+		<meta charset="utf-8">
+		<meta name="color-scheme" content="dark light">
+		<title>Configuration of the weather station - Yokobo</title>
+		<style>
+			body {
+			  color: #222;
+			  background: #fff;
+			  font: 100% system-ui;
+			}
+			a {
+			  color: #0033cc;
+			}
+
+			@media (prefers-color-scheme: dark) {
+			  body {
+				color: #eee;
+				background: #121212;
+			  }
+
+			  body a {
+				color: #809fff;
+			  }
+			}
+
+			#loading {
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			function parseURLParams(url) {
+				var queryStart = url.indexOf("?") + 1,
+					queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+					query = url.slice(queryStart, queryEnd - 1),
+					pairs = query.replace(/\+/g, " ").split("&"),
+					parms = {}, i, n, v, nv;
+
+				if (query === url || query === "") return;
+
+				for (i = 0; i < pairs.length; i++) {
+					nv = pairs[i].split("=", 2);
+					n = decodeURIComponent(nv[0]);
+					v = decodeURIComponent(nv[1]);
+
+					if (!parms.hasOwnProperty(n)) parms[n] = [];
+					parms[n].push(nv.length === 2 ? v : null);
+				}
+				return parms;
+			}
+
+			var userLang = navigator.language || navigator.userLanguage; 
+			
+			message = "";
+			switch(userLang.substring(0, 2))
+			{
+				case "fr":
+					message="Yokobo a été configuré, la lumière doit s'éteindre. Vous pouvez l'utiliser dès à présent.<br/>La température intérieur et extérieur est de ";
+					break;
+				case "ja":
+					message="ヨコボの設定が完了しましたので、これから使用できます。<br/>室内外の温度は";
+					break;
+				case "es":
+					message="Yokobo ha sido configurado, puede utilizarlo a partir de ahora.<br/>La temperatura interior y exterior es";
+					break;
+				default:
+					message="Yokobo has been configured, the light should stop. You can use it from now.<br/>The temperature inside and outside is ";
+					break;
+			}
+
+			message+=parseURLParams(window.location.href)["in"] + " / " + parseURLParams(window.location.href)["out"] + " °C.<br/>"
+		</script>
+	</head>
+	<body>
+		<p id="data">Yokobo has been configured, the light should stop. You can use it from now.<br/>The temperature inside and outside is </p>
+		<div id="loading"><img src="yokobo-ok.png"/></div>
+		
+		<script>
+			document.getElementById("data").innerHTML = message;
+		</script>
+	</body>
+</html>

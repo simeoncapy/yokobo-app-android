@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources
+    [<!ENTITY appname "Yokobo"><!ENTITY author "GVLab"><!ENTITY authorlong "GVLab (TUAT, Tokyo, Japan)"><!ENTITY author2 "Orange"><!ENTITY authorlong2 "Orange (Lanion, France)"><!ENTITY appver "1.0.0">]>
+<resources>
+    <string name="app_ver" translatable="false">&appver;</string>
+    <string name="app_name">&appname;</string>
+    <string name="bluetooth_name" translatable="false">yokoboecho</string>
+    <string name="key_shared_preference_yokobo_ip" translatable="false">yokoboIp</string>
+    <string name="key_shared_preference_yokobo_configured" translatable="false">yokoboConfigured</string>
+    <string name="key_shared_preference_weather_station_id" translatable="false">weatherStationId</string>
+
+    <string name="password">type the password</string>
+    <string name="cancel">Cancel</string>
+    <string name="validation">OK</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_help">Help</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_config">Configuration</string>
+    <string name="title_config_wifi">Wi-Fi configuration</string>
+    <string name="title_config_ws">Weather Station configuration</string>
+    <string name="title_about">About</string>
+    <string name="title_info">Information about your Yokobo</string>
+
+    <!-- * Setting * -->
+    <string name="setting_cat_yokobo">Yokobo</string>
+    <string name="setting_cat_app">Application</string>
+
+    <!-- ** about Yokobo ** -->
+    <string name="setting_key_config" translatable="false">configuration</string>
+    <string name="setting_yokobo_not_configured">Yokobo is not yet configured</string>
+    <string name="setting_yokobo_configured">Yokobo is already configured</string>
+    <string name="setting_yokobo_configure">Click here to configure Yokobo</string>
+    <string name="setting_yokobo_reconfigure">Click here to reconfigure Yokobo</string>
+
+    <string name="setting_key_yokobo_info">yokobo_info</string>
+    <string name="setting_yokobo_info">Information about your Yokobo</string>
+    <string name="setting_yokobo_info_scan">Configure Yokobo before, if it was already done, click here to find Yokobo</string>
+    <string name="setting_yokobo_info_connected">Yokobo is connected</string>
+
+    <!-- ** about the app ** -->
+    <string name="setting_key_language" translatable="false">language</string>
+    <string name="setting_language">Language</string>
+    <string name="setting_language_summary">Change the language of the app</string>
+
+    <string name="setting_theme">Theme</string>
+    <string name="setting_theme_summary">Change the theme of the app</string>
+
+    <string name="setting_phone_theme">Phone theme</string>
+    <string name="setting_light_theme">Light mode</string>
+    <string name="setting_dark_theme">Dark mode</string>
+
+    <string name="setting_key_dev" translatable="false">devmode</string>
+    <string name="setting_dev">Developer mode</string>
+    <string name="setting_dev_summary">A password is required</string>
+
+    <string name="setting_key_about" translatable="false">about</string>
+
+    <string name="setting_about">About the application</string>
+
+    <!-- * About * -->
+    <string name="about_intro">&appname; is an app to manage the robot Yokobo. More information on <a href="http://yokobo.org/">http://yokobo.org/</a>.</string>
+    <string name="about_legal">&appname; is developed by &authorlong; in partnership with &authorlong2;.\n(2021) App version &appver;</string>
+
+    <!-- * Config * -->
+    <!--   ** Bluetooth **  -->
+    <string name="config_intro">Welcome to Yokobo configuration assistant! You will need to connect your phone to Yokobo with Bluetooth.</string>
+    <string name="config_permission">The application will need to access to the bluetooth and location of your device to connect to Yokobo. Please give the required permissions.</string>
+
+    <string name="config_bluetooth_unavailable">Your device does not support Bluetooth.</string>
+    <string name="config_bluetooth_disable">Bluetooth is not enabled.</string>
+    <string name="config_bluetooth_enable">Bluetooth is enabled.</string>
+    <string name="config_bluetooth_already_paired">%1$s is already paired with your device.</string>
+    <string name="config_bluetooth_explanation">To connect your device to Yokobo, please activate the bluetooth of the robot by pressing about 5 s on the
+                                                bluetooth button located on the back of Yokobo. The light should start blinking in blue, then select it
+                                                from the list below.</string>
+    <string name="config_location_disabled">The location needs to be activated in order to detect Yokobo. Please rerun the wizard and accept the usage of location.</string>
+    <string name="config_bluetooth_discovering">Looking for device, please wait...</string>
+    <string name="config_bluetooth_discovering_stop">Scanning device stopped after time out.</string>
+    <string name="config_bluetooth_title_list_devices">List of reachable Yokobos</string>
+    <string name="config_bluetooth_no_device_found">No Yokobos has been found, be sure that Yokobo is on discovery mode.</string>
+    <string name="config_bluetooth_retry_button">Retry</string>
+
+    <!--   ** Wifi **  -->
+    <string name="config_wifi_intro">We will now connect Yokobo to your network. If you want to connect it to the same wifi network as your phone, select it with the button below. Otherwise, click on the second button to login manually.</string>
+    <string name="config_wifi_not_connected">You are not connected to a network</string>
+    <string name="config_wifi_another">Use another network</string>
+    <string name="config_wifi_list_title">List of reachable Wi-Fi network</string>
+    <string name="config_wifi_frequency">Frequency: %1$s GHz</string>
+    <string name="config_wifi_password">Please enter the password of the WiFi network</string>
+    <string name="config_wifi_checkbox_forget">Forget the previous Wifi network(s) configured in Yokobo</string>
+    <string name="config_wifi_please_wait_connection">Please wait, the connection between Yokobo and your home network is setting-up...</string>
+
+    <!--   ** Weather station **  -->
+    <string name="config_ws_intro">We will now link your Netamo weather station to Yokobo. Please follow the instructions written below.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- * Info * -->
+    <string name="info_description">You can access from this screen some live data from Yokobo. The data of the Weather Station that have an impact on
+                                    Yokobo\'s behaviour but also if it detects a key or someone. Finally, you can have the current state of Yokobo.</string>
+    <!--<string name="info_temperature">in %1$d °C\n out %2$d °C</string>-->
+    <string name="info_temperature">in 16.5 °C\n out 11.1 °C</string>
+    <!--<string name="info_humidity">in %1$d %\n out %2$d %</string>-->
+    <string name="info_humidity">in 62 %\n out 82 %</string>
+
+    <string name="info_state_state">State</string>
+    <string name="info_state_breathing_desc">Yokobo is breathing quietly.</string>
+    <string name="info_state_soh">State of the house</string>
+    <string name="info_state_soh_desc">Yokobo is expressing the <i>state of the house</i>. Its behaviours change according the current weather inside or outside the house.</string>
+</resources>

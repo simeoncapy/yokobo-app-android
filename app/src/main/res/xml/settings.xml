@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:key="setting_cat_yokobo"
+        app:title="@string/setting_cat_yokobo">
+
+        <Preference
+            app:key="@string/setting_key_config"
+            app:title="@string/setting_yokobo_not_configured"
+            app:summary="@string/setting_yokobo_configure"
+            app:icon="@drawable/ic_configure"/>
+
+        <Preference
+            app:key="@string/setting_key_yokobo_info"
+            app:title="@string/setting_yokobo_info"
+            app:summary="@string/setting_yokobo_info_scan"
+            app:icon="@drawable/ic_robot"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="setting_cat_app"
+        app:title="@string/setting_cat_app">
+
+        <ListPreference
+            app:key="@string/setting_key_language"
+            app:summary="@string/setting_language_summary"
+            app:title="@string/setting_language"
+            app:entries="@array/language"
+            app:entryValues="@array/language_code"
+            app:icon="@drawable/ic_language"/>
+
+        <ListPreference
+            app:key="theme"
+            app:summary="@string/setting_theme_summary"
+            app:title="@string/setting_theme"
+            app:entries="@array/theme"
+            app:entryValues="@array/theme_code"
+            app:icon="@drawable/ic_theme"/>
+
+        <Preference
+            app:key="@string/setting_key_dev"
+            app:title="@string/setting_dev"
+            app:summary="@string/setting_dev_summary"
+            app:icon="@drawable/ic_baseline_developer_mode_24"/>
+
+        <Preference
+            app:key="@string/setting_key_about"
+            app:title="@string/setting_about"
+            app:icon="@drawable/ic_baseline_info_24"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

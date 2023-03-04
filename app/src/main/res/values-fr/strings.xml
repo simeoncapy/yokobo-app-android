@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY appname "Yokobo">
+    <!ENTITY author "GVLab">
+    <!ENTITY authorlong "GVLab (TUAT, Tokyo, Japan)">
+    <!ENTITY author2 "Orange">
+    <!ENTITY authorlong2 "Orange (Lanion, France)">
+    <!ENTITY appver "1.0.0">
+    ]>
+<resources>
+    <string name="app_name">&appname;</string>
+    <string name="title_home">Accueil</string>
+    <string name="title_shop">Boutique</string>
+    <string name="title_help">Aide</string>
+    <string name="title_settings">Paramètres</string>
+    <string name="title_config">Configuration</string>
+    <string name="title_about">À propos</string>
+
+    <!-- * Setting * -->
+    <string name="setting_cat_yokobo">Yokobo</string>
+    <string name="setting_cat_app">Application</string>
+
+    <!-- ** about Yokobo ** -->
+    <string name="setting_yokobo_not_configured">Yokobo n\'est pas encore configuré</string>
+    <string name="setting_yokobo_configured">Yokobo est déjà configuré</string>
+    <string name="setting_yokobo_configure">Cliquez pour configurer Yokobo</string>
+    <string name="setting_yokobo_reconfigure">Cliquez pour reconfigurer Yokobo</string>
+
+    <!-- ** about the app ** -->
+    <string name="setting_language">Langue</string>
+    <string name="setting_language_summary">Changer la langue de l\'application</string>
+
+    <string name="setting_theme">Thème</string>
+    <string name="setting_theme_summary">Changer le thème de l\'application</string>
+
+    <string name="setting_phone_theme">Thème du système</string>
+    <string name="setting_light_theme">Forcer le thème clair</string>
+    <string name="setting_dark_theme">Forcer le thème sombre</string>
+
+    <string name="setting_about">À propos de l\'application</string>
+
+    <!-- * About * -->
+    <string name="about_intro">&appname; est une application pour gérer le robot Yokobo.</string>
+    <string name="about_legal">&appname; est developpée par &authorlong; en partenariat avec &authorlong2;.\n(2021) version de l\'application &appver;</string>
+
+    <!-- * Config * -->
+    <string name="config_bluetooth_unavailable">L\'appareil ne supporte pas le Bluetooth</string>
+    <string name="config_bluetooth_disable">Le Bluetooth n\'est pas activé</string>
+    <string name="config_bluetooth_enable">Le Bluetooth est activé</string>
+    <string name="config_bluetooth_title">Connectivité Bluetooth</string>
+</resources>

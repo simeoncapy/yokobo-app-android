@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="robots" content="noindex">
+		<meta charset="utf-8">
+		<meta name="color-scheme" content="dark light">
+		<title>Configuration of the weather station - Yokobo</title>
+		<style>
+			body {
+			  color: #222;
+			  background: #fff;
+			  font: 100% system-ui;
+			}
+			a {
+			  color: #0033cc;
+			}
+
+			@media (prefers-color-scheme: dark) {
+			  body {
+				color: #eee;
+				background: #121212;
+			  }
+
+			  body a {
+				color: #809fff;
+			  }
+			}
+
+			#loading {
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			var userLang = navigator.language || navigator.userLanguage; 
+			
+			message = "We are linking Yokobo with the weather station, please wait.";
+			switch(userLang.substring(0, 2))
+			{
+				case "fr":
+					message="Appairage de la station météo avec Yokobo en cours, veuillez patienter.";
+					break;
+				case "ja":
+					message="ウェザーステーションとヨコボが通信中です。少々お待ちください。";
+					break;
+				case "es":
+					message="Estamos conectando Yokobo con la estación meteorológica, por favor espere.";
+					break;
+				default:
+					message="We are linking Yokobo with the weather station, please wait.";
+					break;
+			}
+		</script>
+	</head>
+	<body>
+		<p id="data">We are linking Yokobo with the weather station, please wait.</p>
+		<div id="loading"><img src="robot.gif"/></div>
+		
+		<script>
+			document.getElementById("data").innerHTML = message;
+		</script>
+	</body>
+</html>
